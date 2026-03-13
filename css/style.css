@@ -1,7 +1,43 @@
 /* ----universal---- */
-*{
-    margin:0;
-    padding:0;
+* {
+  margin: 0;
+  padding: 0;
 }
-   
+h1 {
+  font-family: Ruluko;
+}
+h2,
+h3,
+p,
+a {
+  font-family: Sarabun;
+}
 
+
+
+
+
+
+
+
+
+
+
+footer {
+  background-color: #4f0202;
+}
+.footergrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: white;
+  padding: 3rem;
+}
+
+.footergrid li a {
+  text-decoration: none;
+  color: white;
+}
+
+.footergrid ul {
+  list-style: none;
+}
