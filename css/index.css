@@ -1,7 +1,7 @@
 main {
   margin: 0 5rlh;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 3fr;
   gap: 1rlh;
 }
 
@@ -11,20 +11,35 @@ main {
 .image_wrapper {
   aspect-ratio: 4/3;
   display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: aquamarine;
 }
 #categories {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  gap: 0.5rlh;
   #buttons {
     height: 100%;
+    padding: 0.5rlh;
     display: flex;
     flex-direction: column;
-    gap: 0.5rlh;
+    gap: 1rlh;
     color: #fff;
     background-color: #4f0202;
+    .category_button {
+      padding: 0.5lh 1lh;
+      background-color: #4f0202;
+      filter: brightness(1.5);
+    }
+    .category_button:hover {
+      filter: brightness(1.5);
+      scale: 1.05;
+      cursor: pointer;
+    }
+    .category_button:active {
+      scale: 1;
+      background-color: #444;
+    }
   }
 }
 #offers {
@@ -35,4 +50,13 @@ main {
   div {
     width: 100%;
   }
+}
+
+/* .category_hidden{
+    display: none;
+} */
+
+#buttons a {
+  color: #fff;
+  text-decoration: none;
 }
