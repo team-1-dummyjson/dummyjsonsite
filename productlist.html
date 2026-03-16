@@ -3,17 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Productlist</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Productlist</title>
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/productlist.css" />
     <script src="js/productlist.js" defer></script>
   </head>
   <body>
     <header></header>
-    <main></main>
-    <footer></footer>
+    <main>
+      <section>
+        <p><strong>Skønhed > Make-Up</strong></p>
+        <div class="sorting">
+          <p>Sorter efter</p>
+          <div class="sorting_select">
+            <p>Pris:</p>
+            <select name="select_price" id="select_price">
+              <option name="select_price" value="">Ingen</option>
+              <option name="select_price" value="">Høj - Lav</option>
+              <option name="select_price" value="">Lav - Høj</option>
+            </select>
+          </div>
+          <div class="sorting_select">
+            <p>Navn:</p>
+            <select name="select_title" id="select_title">
+              <option name="select_title" value="">Ingen</option>
+              <option name="select_title" value="">A - Z</option>
+              <option name="select_title" value="">Z - A</option>
+            </select>
+          </div>
+        </div>
+        <div class="list_grid"></div>
+      </section>
+    </main>
+    <footer>
+      <p>Footer</p>
+    </footer>
   </body>
 </html>
