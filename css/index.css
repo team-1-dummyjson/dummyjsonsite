@@ -1,62 +1,65 @@
 main {
-  margin: 0 5rlh;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 1rlh;
-}
-
-#nyheder {
-  width: 100%;
-}
-.image_wrapper {
-  aspect-ratio: 4/3;
-  display: flex;
-  background-color: aquamarine;
+  margin-top: 0;
 }
 #categories {
-  width: 100%;
+  padding-top: calc(1rlh + 2vw);
+  padding-bottom: 1rlh;
   display: flex;
   flex-direction: column;
-  gap: 0.5rlh;
+  gap: 1rlh;
   #buttons {
-    height: 100%;
-    padding: 0.5rlh;
-    display: flex;
-    flex-direction: column;
-    gap: 1rlh;
-    color: #fff;
-    background-color: #4f0202;
-    .category_button {
-      padding: 0.5lh 1lh;
-      background-color: #4f0202;
-      filter: brightness(1.5);
-    }
-    .category_button:hover {
-      filter: brightness(1.5);
-      scale: 1.05;
-      cursor: pointer;
-    }
-    .category_button:active {
-      scale: 1;
-      background-color: #444;
-    }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    flex-wrap: wrap;
+    column-gap: 1rlh;
+    row-gap: 0.5rlh;
   }
+}
+#news {
+  margin-top: calc(-2rlh - 2vw);
+  width: 100%;
 }
 #offers {
-  grid-column: span 2;
+  margin: 0 -5vw;
   display: flex;
   flex-direction: row;
-  gap: 1rlh;
-  div {
-    width: 100%;
+  gap: 2rlh;
+  .offers_subdiv {
+    height: fit-content;
+    width: calc(50% - 1rlh);
+    padding: 0.5rlh;
+    .carousel {
+      padding: 1rlh;
+      display: grid;
+      grid-template-columns: repeat(5, calc((200% - 1rlh) / 5));
+      gap: 1rlh;
+      overflow-x: auto;
+      scroll-padding: 1rlh;
+      text-align: center;
+    }
+  }
+  .offers_subdiv:first-of-type {
+    padding-left: 5vw;
+  }
+  .offers_subdiv:last-of-type {
+    padding-right: 5vw;
   }
 }
 
-/* .category_hidden{
-    display: none;
-} */
-
-#buttons a {
-  color: #fff;
-  text-decoration: none;
+/*----------+----------+----------+----------*/
+@media screen and (width < 800px) {
+  #offers {
+    display: flex;
+    flex-direction: column;
+    gap: calc(2rlh + 2vw);
+    .offers_subdiv {
+      width: 100%;
+      padding: 0.5rlh 5vw;
+      border-radius: 0;
+      .carousel {
+        grid-template-columns: repeat(5, 100%);
+        mask: linear-gradient(90deg, #0000, #000 10% 90%, #0000);
+      }
+    }
+  }
 }
