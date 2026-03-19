@@ -1,0 +1,35 @@
+#product_card {
+  margin: 0 10vw;
+  padding: 0.5rlh;
+  align-self: center;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rlh;
+  .product_info {
+    display: flex;
+    flex-direction: column;
+    *:not(:first-child) {
+      margin-top: 0.5lh;
+    }
+    .add2cart_wrapper {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .img_wrapper {
+    display: flex;
+    align-items: center;
+    img {
+      width: 100%;
+    }
+  }
+}
+/*----------+----------+----------+----------*/
+@media screen and (width < 800px) {
+  #product_card {
+    display: flex;
+    flex-direction: column;
+  }
+}

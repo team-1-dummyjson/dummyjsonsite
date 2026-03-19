@@ -6,14 +6,51 @@
     <title>Product</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/product.css" />
+    <script src="js/general.js" defer></script>
     <script src="js/product.js" defer></script>
   </head>
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <header>
+      <nav>
+        <img class="logo" src="img/logo.svg" alt="RUHND logo" />
+        <button class="burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </button>
+        <div class="menu">
+          <a href="index.html">Forside</a>
+          <a href="#">Indkøbskurv</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <h2 class="page_heading nav_trail"><a href="index.html">Forside</a> ></h2>
+      <section id="product_card"></section>
+      <section id="similar_products">
+        <h2>Lignende Produkter:</h2>
+        <div class="img_lineup" id="recommendation_feed"></div>
+      </section>
+    </main>
+    <footer>
+      <div id="adress">
+        <img src="img/logo.svg" alt="logo" />
+        <p>Randomstreet 2, 4. th.</p>
+        <p>8370 Randers</p>
+      </div>
+      <div id="socials">
+        <p class="footer_header">Følg os Online:</p>
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">TikTok</a>
+      </div>
+    </footer>
   </body>
 </html>

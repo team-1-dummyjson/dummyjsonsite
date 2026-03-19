@@ -1,74 +1,197 @@
-/* ----index---- */
-
-.gridindex{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+/*----------| PAGE LAYOUT |----------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*----------| PAGE ELEMENTS |----------*/
+header {
+  padding: 0 2vw;
+  nav {
+    height: 10vw;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      width: 33%;
+      padding-top: 0.5rlh;
+    }
+    .menu {
+      width: 50%;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }
+  .burger {
+    aspect-ratio: 1/1;
+    height: 100%;
+    padding: 0.25rlh;
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    .line {
+      height: 0;
+      width: 100%;
+      outline: 1.5px solid var(--colour_black);
+      transition: 0.2s linear;
+    }
+    .line:nth-child(2) {
+      transition: 0.15s linear;
+    }
+  }
+}
+main {
+  margin: calc(1rlh + 2vw) 0;
+  display: flex;
+  flex-direction: column;
+  gap: calc(2rlh + 2vw);
+  .page_heading {
+    padding: 0 5vw;
+  }
+  section {
+    padding: 0.5rlh 5vw;
+  }
+  .nav_trail {
+    margin-bottom: -1.5rlh;
+  }
+}
+footer {
+  padding: 1rlh 2vw;
+  display: flex;
+  flex-direction: row;
+  gap: 2rlh;
+  div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  img {
+    width: 25%;
+    filter: invert(1);
+    margin-bottom: 0.5lh;
+  }
+  .footer_header {
+    width: fit-content;
+    margin-bottom: 0.5lh;
+  }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ----productlist---- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ----product---- */
+/*----------| UNIQUE ELEMENTS |----------*/
+.button {
+  width: 100%;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0.25lh 0;
+}
+.add2cart {
+  width: fit-content;
+  margin: 0.5lh 0;
+  padding: 0.25lh 4lh;
+}
+.button:hover {
+  filter: brightness(1.5);
+  scale: 1.05;
+}
+.button:active {
+  filter: none;
+  scale: 1;
+}
+/*----------*/
+.img_lineup {
+  width: 100%;
+  padding: 0.5rlh;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rlh;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+.product {
+  height: 100%;
+  padding: 0.5rlh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .title {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+/*----------| MOBILE VIEW |----------*/
+@media screen and (width < 800px) {
+  header {
+    padding: 0.5rlh;
+    nav {
+      .logo {
+        width: 50%;
+      }
+      .burger {
+        display: flex;
+      }
+      .menu {
+        transition: 0.3s linear;
+        position: absolute;
+        top: calc(10vw + 1rlh);
+        right: 0;
+        height: 0;
+        width: 40%;
+        display: none;
+        flex-direction: column;
+        align-items: right;
+        background-color: var(--colour_white);
+        border: 0.25rlh solid var(--colour_dark-grey);
+        border-top: none;
+        a {
+          width: fit-content;
+          padding-right: 1rlh;
+          padding-bottom: 0.25lh;
+          align-self: flex-end;
+          text-decoration: 2px underline;
+          text-underline-offset: 10%;
+        }
+      }
+    }
+    nav.active {
+      .burger.active {
+        .line:nth-of-type(1) {
+          transform: translate(0, 2.5vw) rotate(45deg);
+        }
+        .line:nth-of-type(2) {
+          transition: 0.15s linear;
+          outline: 1.5px solid transparent;
+        }
+        .line:nth-of-type(3) {
+          transform: translate(0, -2.5vw) rotate(-45deg);
+        }
+      }
+      .menu {
+        transition: 0.3s linear;
+        height: fit-content;
+        display: flex;
+      }
+    }
+  }
+  .img_lineup {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 100%);
+  }
+}

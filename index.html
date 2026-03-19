@@ -6,7 +6,10 @@
     <title>Forside</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/index.css" />
@@ -16,70 +19,55 @@
   <body>
     <header>
       <nav>
-        <img class="logo" src="img/logo.svg" alt="RUHNED logo" />
-        <div>
-          <ul class="menu">
-            <li><a href="index.html">Forside</a></li>
-            <li><a href="productlist.html">Produkter</a></li>
-            <li><a href="#">Indkøbsvogn</a></li>
-          </ul>
-          <button class="burger">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
-          </button>
+        <img class="logo" src="img/logo.svg" alt="RUHND logo" />
+        <button class="burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </button>
+        <div class="menu">
+          <a href="index.html">Forside</a>
+          <a href="#">Indkøbskurv</a>
         </div>
       </nav>
     </header>
     <main>
       <section id="categories">
-        <h2>Hvad leder du efter?</h2>
+        <h1>Vores Udvalg</h1>
         <div id="buttons">
-          <a class="category_button" href="productlist.html?category=beauty">Makeup</a>
-          <a class="category_button" href="productlist.html?category=fragrances">Parfume</a>
-          <a class="category_button" href="productlist.html?category=hygiejne">Hygiejne</a>
-          <a class="category_button" href="productlist.html?category=accesories">Accesories</a>
-          <a class="category_button" href="productlist.html?category=tasker">Tasker</a>
+          <a class="button" href="productlist.html?category=womens-jewellery">Accessories</a>
+          <a class="button" href="productlist.html?category=beauty">Make-Up</a>
+          <a class="button" href="productlist.html?category=fragrances">Parfume</a>
+          <a class="button" href="productlist.html?category=skin-care">Hygiejne</a>
+          <a class="button" href="productlist.html?category=womens-bags">Tasker</a>
         </div>
       </section>
-      <section id="nyheder">
-        <h1>Nyheder</h1>
-        <div class="image_wrapper">
-          <p>billede</p>
-        </div>
+      <section id="news">
+        <h2>Nye Produkter:</h2>
+        <div class="img_lineup" id="new_products"></div>
       </section>
-
       <section id="offers">
-        <div id="for_you">
-          <h2>Til dig</h2>
-          <div class="image_wrapper">
-            <p>img</p>
-          </div>
+        <div class="offers_subdiv">
+          <h2>Særligt Udvalgt til Dig:</h2>
+          <div class="carousel" id="for_you"></div>
         </div>
-
-        <div id="popular">
-          <h2>Populær produkter</h2>
-          <div class="image_wrapper">
-            <p>img</p>
-          </div>
+        <div class="offers_subdiv">
+          <h2>Populært Blandt Andre Kunder:</h2>
+          <div class="carousel" id="popular"></div>
         </div>
       </section>
     </main>
     <footer>
-      <div class="footergrid">
-        <div>
-          <p>Følg os:</p>
-          <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">TikTok</a></li>
-          </ul>
-        </div>
-        <div>
-          <h2>RUHND</h2>
-          <p>Randomstreet, nr. 2, 4. sal.th</p>
-          <p>8370 Randers</p>
-        </div>
+      <div id="adress">
+        <img src="img/logo.svg" alt="logo" />
+        <p>Randomstreet 2, 4. th.</p>
+        <p>8370 Randers</p>
+      </div>
+      <div id="socials">
+        <p class="footer_header">Følg os Online:</p>
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">TikTok</a>
       </div>
     </footer>
   </body>
